@@ -1,0 +1,15 @@
+<h1>Oh the places I've gone!</h1>
+
+<h2>Currently, I have been to <%= @places.count %> wonderful places</h2>
+
+<ul>
+  <% for place in @places %>
+    <li>
+      <a href="/places/<%= place["id"] %>">
+      <%= place["name"] %></a>
+    </li>
+  <% end %>
+</ul>
+
+
+<a href="/places/new">Insert New Exciting Locale!</a>

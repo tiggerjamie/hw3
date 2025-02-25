@@ -1,0 +1,30 @@
+
+<h1> My time in <%= @place["name"]%></h1>
+
+
+
+<h3>Things I did in <%= @place["name"]%></h3>
+
+<h3>How many things have I recorded for this place? <%= @entries.count%></h3>
+
+<ul>
+ <% for entry in @entries %>
+    <li>
+      <%= entry["title"] %></a>
+      Occurred On <%= entry["occurred_on"]%>
+      <%= entry["description"]%>
+        
+      Created <%= entry["created_at"]%>, Updated <%= entry["updated_at"]%>
+    </li>
+  <% end %>
+</ul>
+
+<p>
+  <a href="/entries/new">New Entry</a>
+</p>
+
+<p>
+  <a href="/places">Back to All The Places I've Gone</a>
+</p>
+
+<p>Created <%= @place["created_at"]%>, Updated <%= @place["updated_at"]%> </p>

@@ -1,0 +1,18 @@
+<h1>New Entry</h1>
+
+<form action="/entries" method="post">
+  <p>
+    <label for="title">Activity Title</label>
+    <input type="text" name="title" id="title">
+    <label for="description">Activity Description</label>
+    <input type="text" name="description" id="description">
+  </p>
+  <p>
+  <label for="occurred_on">This Happened On:</label>
+  <input type="t.date" name="occurred_on" id="occurred_on">
+  <input type="text" name="place_id" value="<%= %>">
+  <input type="t.datetime" name="created_at" value="<%= Time.current %>">
+  <input type="t.datetime" name="updated_at" value="<%= Time.current %>">
+  </p>
+  <button>Submit</button>
+</form>

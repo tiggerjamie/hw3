@@ -9,18 +9,16 @@
 
 <ul>
  <% for entry in @entries %>
-    <li>
-      <%= entry["title"] %></a>
-      Occurred On <%= entry["occurred_on"]%>
-      <%= entry["description"]%>
-        
-      Created <%= entry["created_at"]%>, Updated <%= entry["updated_at"]%>
+    <h3><%= entry["title"] %></a></h3>
+    <li>Occurred On <%= entry["occurred_on"]%></li>
+    <li><%= entry["description"]%></li>
+    <li>Created <%= entry["created_at"]%>, Updated <%= entry["updated_at"]%>
     </li>
   <% end %>
 </ul>
 
 <p>
-  <a href="/entries/new">New Entry</a>
+  <a href="/entries/new?place_id=<%= @place["id"]%>">New Entry</a>
 </p>
 
 <p>
